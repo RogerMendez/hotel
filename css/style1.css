@@ -1,0 +1,30 @@
+/*----- Reset Tags -----*/
+@import url("bromo1.css");
+@import url("default.css");
+@import url("nivo-slider.css");
+@import url("animate.css");
+@import url("prettyPhoto.css");
+
+/*----- Skin Styles -----
+@import url("black.css");
+@import url("brown.css");
+@import url("blue.css");
+*/
+
+/*----- Layout Styles -----
+@import url("fullWidth.css");
+@import url("boxed.css");
+*/
+
+/*----- Pattern Styles -----
+body { background: url(../images/pattern/2.png) repeat #eee; }
+body { background: url(../images/pattern/3.png) repeat #eee; }
+body { background: url(../images/pattern/4.png) repeat #eee; }
+body { background: url(../images/pattern/5.png) repeat #eee; }
+body { background: url(../images/pattern/6.png) repeat #eee; }
+body { background: url(../images/pattern/7.png) repeat #eee; }
+body { background: url(../images/pattern/8.png) repeat #eee; }
+*/
+body { background: url(../images/pattern/1.png) repeat #eee; }
+
+ 

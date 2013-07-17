@@ -1,0 +1,156 @@
+@charset "utf-8";
+/* black Style */
+
+.wrap{
+	width: 960px !important;
+	margin: 0 auto;
+	margin-top: 15px;
+	-webkit-box-shadow: 
+        0px 0px 7px 0px #aeaeae;
+	-moz-box-shadow: 
+        0px 0px 7px 0px #aeaeae;
+	box-shadow: 
+        0px 0px 7px 0px #aeaeae;
+	height: 100%;
+	display: block;
+	position: relative;
+}
+#footerShadow{
+	width: 900px;
+	padding: 0;
+	position: relative;
+	margin-bottom: 30px;
+}
+
+@charset "utf-8";
+/* Blue Style */
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{
+	color: #7fb4cf;
+}
+input, textarea, select {
+	color:#565a60;
+}
+.menu-wrap {
+	background: url(../images/bg-header.png) repeat-x;
+}
+#header{
+	background: #09234e url(../images/glow.png) no-repeat center top;
+}
+#headerSlider{
+	background: #09234e url(../images/glow.png) no-repeat center top;
+}
+.call{
+	background: url(../images/phone.png) no-repeat left;
+}
+.main-menu ul li:hover, .main-menu ul li.active {
+	border-bottom: solid 2px #2272ca;	
+}
+.main-menu ul li ul {
+	background: #031636;
+}
+.main-menu ul ul li ul ,.main-menu ul ul ul  {
+	background: #031636;
+}
+.main-menu ul ul li ul li a:hover,.main-menu ul ul ul li a:hover {
+	background: #1b3a5c;
+}
+.main-menu ul ul li:hover{
+	background: #1b3a5c;
+}
+.main-menu ul li ul li.drop{
+	background: url(../images/arrow02.png) no-repeat 90% 13px ;
+}
+.main-menu ul li ul li:hover.drop{
+	background: #1b3a5c url(../images/arrow02.png) no-repeat 90% 13px;
+}
+.theme-default .nivo-directionNav a {
+	background:url(../images/arrows.png) no-repeat;
+}
+.ei-slider-thumbs li.ei-slider-element{
+	background: #0d2744;
+	background: rgba(13,39,68,0.9);
+}
+.ei-slider-thumbs li a:hover{
+	background-color: #093667;
+}
+.promo-box p span{
+	color: #7193b2;
+}
+p.subtitle{
+	color: #7ba7c9 !important;
+}
+.testimonial p span{
+	color: #7193b2;
+}
+.searchInput{
+	border: 1px solid #18263a;
+	background: #0b1b34;
+}
+.blog-post h3 a:hover{
+	color: #7fb4cf;
+}
+#blog-post-details .textBlog h3 a:hover, #blog-post-details2 h3 a:hover{
+	color: #7fb4cf;
+}
+.nameInput, .emailInput, .webInput{
+	background: #07152b;
+	border: 1px solid #192c46;
+}
+.messageInput{
+	border: 1px solid #192c46;
+	background: #07152b;
+}
+.nameInput:hover, .emailInput:hover, .webInput:hover, .messageInput:hover{
+	border: 1px solid #1c314d;
+}
+.nameInput:focus, .emailInput:focus, .webInput:focus, .messageInput:focus{
+	background-color: #0c1b30;
+}
+#footer{
+	background: #031835;
+}
+.footer-wrap{
+	background: #031835 url(../images/glow-bottom.png) no-repeat bottom center;
+}
+.post-footer{
+	background: #031835 url(../images/bg-header.png) top repeat-x;
+}
+#footer .buttonPro {
+	background: #102a4d; /* Old browsers */
+	background: -moz-linear-gradient(top, #213b5d 0%, #102a4d 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#213b5d), color-stop(100%,#102a4d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #213b5d 0%,#102a4d 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #213b5d 0%,#102a4d 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #213b5d 0%,#102a4d 100%); /* IE10+ */
+	background: linear-gradient(top, #213b5d 0%,#102a4d 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#213b5d', endColorstr='#102a4d',GradientType=0 ); /* IE6-9 */
+	text-shadow: 0 -1px 0 #333 !important;
+	-webkit-box-shadow: inset 0 1px 0 #2c4e7a;
+	-moz-box-shadow: inset 0 1px 0 #2c4e7a;
+	box-shadow: inset 0 1px 0 #2c4e7a;
+	color: #eee;
+	border: 1px solid #171717;
+	font-size: 11px;
+	padding: 10px 13px;
+	margin: 0px;
+	cursor: pointer;
+}
+#footer .buttonPro:hover {
+	background: #436695;
+	background: -webkit-gradient(linear, left top, left bottom, from(#28456a), to(#143259)) !important;
+	background: -moz-linear-gradient(top, #28456a, #143259) !important;
+}
+#footer .buttonPro:active {
+	background: #102a4d !important;
+	-moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+}
+.socialNav li{
+	background: url(../images/bg-social-nav.png) no-repeat;
+}
+#categories li a:hover{
+	color: #53a8ff;
+}
+#popularPost li p a:hover{
+	color: #53a8ff;
+}
