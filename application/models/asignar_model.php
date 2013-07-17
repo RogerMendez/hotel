@@ -276,5 +276,19 @@ class Asignar_model extends CI_Model
 		return  $this->db->update('clientes',$data);
 
 	}
+	function edit_estadia($num,$hasta,$dias)
+	{
+		$data = array(
+			'num_dias' => $dias,
+			'fecha_sal' => $hasta,
+	
+		 );
+
+		$this->db->where('num_asig',$num);
+		$this->db->where('estado_asig_hab','ACTIVO');
+		return  $this->db->update('asignacion_hab',$data);
+
+	}
+
 
 }	

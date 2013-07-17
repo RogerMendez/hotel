@@ -37,6 +37,8 @@
 $hotel = 0;
 $servi = 0;
 
+
+
 ?>
 </div>
 <br>
@@ -46,10 +48,12 @@ $servi = 0;
 				<th width="15%">APELLIDOS</th>
 				<th width="12%">NOMBRE</th>
 				<th width="5%">NUMERO DE DIAS</th>
-				<th width="16%">COSTO</th>
+				<th width="8%">FEC ENTRADA</th>
+				<th width="10%">FEC SALIDA</th>
+				<th width="8%">COSTO</th>
 				<th width="8%"> TOTAL</th>
 				
-				<th width="10%">OPCIONES</th>
+				<th width="8%">OPCIONES</th>
 			
 			</tr> 	
 			<? foreach($filas as $fila):?> 
@@ -57,6 +61,9 @@ $servi = 0;
 					<td> <?= $fila->ap_cli?></td>
 					<td> <?= $fila->nom_cli?></td>
 					<td> <?= $fila->num_dias?></td>
+					<td> <?= $fila->fecha_ent?></td>
+					<td> <?= $fila->fecha_sal?></td>
+
 					<td> <?= ($fila->costo_total/$fila->num_dias )?></td>
 					<td> <?= $fila->costo_total?> <? $num =  $fila->num_asig; $hotel = $hotel + $fila->costo_total ?></td>
 					<td>
@@ -68,6 +75,8 @@ $servi = 0;
 				</tr>
 			<?endforeach?> 
 			</table>
+			 <?$anchor = array('class' => 'ink-label info' );?>
+     <?= anchor("asignacion/ampliar_estadia/$id_hab", 'CAMBIAR TIEMPO DE  ESTADIA EN EL HOTEL', $anchor);?><br><br><br>
 
 <br><br><h2><?= 'LISTA DE SERVICIO A LA HABITACION' ?></h2><br>
      <?$anchor = array('class' => 'ink-label info' );?>

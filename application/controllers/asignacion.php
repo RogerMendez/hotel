@@ -13,7 +13,7 @@ class Asignacion extends CI_Controller {
 		$this->load->helper('form');
 		$this->load->model('tipo_model');
 	}
-	function _is_logued_in()
+	function _is_logued_in() 
 		{
 			$is_logued_in = $this->session->userdata('is_logued_in');
 			if($is_logued_in != TRUE)
@@ -444,6 +444,45 @@ class Asignacion extends CI_Controller {
 
 			}
 			
+		}
+		function ampliar_estadia($id_hab)
+		{
+			$dato['id_hab'] = $id_hab;
+			
+			//$dato['habitacion'] =$this->asignar_model->selecc_habitacion($id_hab);
+
+			$dato['title']= "Cambiar tiempo de estadia";
+
+			  $ser = $this->asignar_model->cliente_cuarto($id_hab);
+            $num = $ser[0]->num_asig;
+            $dato['fec_ini']  = $ser[0]->fecha_ent;
+
+           	$dato['fecha'] = date("Y") ."-". date("m") ."-". date("d");
+			$this->load->view('inicio/cabecera', $dato);
+			$this->load->view('inicio/menu');	
+			$this->load->view('asignacion/ampliar_dias', $dato);
+			$this->load->view('inicio/pie');
+
+
+		}
+		function cambiar_asignacion($id_hab)
+		{
+
+			$ser = $this->asignar_model->cliente_cuarto($id_hab);
+            $num = $ser[0]->num_asig;
+            $fecha_ini  = $ser[0]->fecha_ent;
+			
+			$hasta =  $this->input->post('hasta');
+			
+			$fecha=$hasta;
+			$segundos=strtotime($fecha) - strtotime($fecha_ini);
+			$dias=intval($segundos/60/60/24);
+			$dias = $dias +1 ;
+
+			$actualizar = $this->asignar_model->edit_estadia($num,$hasta,$dias);
+
+			$this->ver_clientes($id_hab);
+
 		}
 
 }
