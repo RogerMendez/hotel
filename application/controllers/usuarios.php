@@ -183,25 +183,15 @@ class Usuarios extends CI_Controller
             }
             else
             {
-                if(! $this->usuarios_model->id_check($id))
-                {
-                    $username = $this->input->post('username');
-                     $clave = $this->input->post('pass');           
-                     $tipo = $this->input->post('tipo_user');        
-                      
-                      $estado = 'HABILITADO';
-                      $insert = $this->usuarios_model->insert_user($tipo,$id,$estado,$username,$clave);
-                      #if($insert)
-                      #{
-                        #echo "correcto";
-                      #}
-                      $update = $this->usuarios_model->edit_st($id);
+                $username = $this->input->post('username');
+                $clave = $this->input->post('pass');           
+                $tipo = $this->input->post('tipo_user');        
 
-                }   
-                
-                    $this->lis_user();    
-                   
-                
+                $estado = 'HABILITADO';
+                $insert = $this->usuarios_model->insert_user($tipo,$id,$estado,$username,$clave);
+
+                $update = $this->usuarios_model->edit_st($id);
+                $this->lis_user();    
             }
         }
         function _verificar_usuario ($user) 
