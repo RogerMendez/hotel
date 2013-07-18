@@ -276,11 +276,26 @@ class Asignar_model extends CI_Model
 		return  $this->db->update('clientes',$data);
 
 	}
-	function edit_estadia($num,$hasta,$dias)
+	function select_habita_id($id)
+	{
+		$this->db->where('id_hab',$id);
+		$query = $this->db->get('habitacion'); 
+		
+		if($query->num_rows() > 0)
+		{
+			foreach ($query->result() as $fila)
+			{
+				$dato[] = $fila;
+			}
+			return $dato;
+		}
+	}
+	function edit_estadia($num,$hasta,$dias, $costo_total)
 	{
 		$data = array(
 			'num_dias' => $dias,
 			'fecha_sal' => $hasta,
+			'costo_total'=> $costo_total,
 	
 		 );
 

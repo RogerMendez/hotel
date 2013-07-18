@@ -30,11 +30,11 @@ class Usuarios_model extends CI_Model
 		$this->db->where('id_per',$id);
 		$query = $this->db->get('usuario');
 		if($query->num_rows()>0){
-			return false;
+			return true;
 		} 
 		else
 		{
-			return true;
+			return false;
 		} 
 	}
 	

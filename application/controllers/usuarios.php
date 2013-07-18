@@ -55,7 +55,7 @@ class Usuarios extends CI_Controller
                 $data = array(
                     'is_logued_in'  => TRUE,                   
                     'tipo_user' => $login[0]->tipo_user,
-                    'id_per' => $login[0]->id_per,  
+                    'id_per' =>  8,//$login[0]->id_per,  
                     'estado' => $login[0]->estado_user,
                     'user' => $login[0]->username,  
                     'menu' => $menu,                
@@ -148,18 +148,18 @@ class Usuarios extends CI_Controller
         }
         function nuevo_user()
         {
-              $menu = $this->session->userdata('menu');
-                $id = $this->session->userdata('id_per');
-                $dato ['persona'] =$this->personal_model->selec_personal_modi($id);    
-                $dato['tipo_user'] = $this->session->userdata('tipo_user');   
+            $menu = $this->session->userdata('menu');
+            $id = $this->session->userdata('id_per');
+            $dato ['persona'] =$this->personal_model->selec_personal_modi($id);    
+            $dato['tipo_user'] = $this->session->userdata('tipo_user');   
 
-                $dato['filas'] =$this->personal_model->selec_personal_modi($id);
-                $dato['title']= "Registro de usuarios del sistema";
-            
-                    $this->load->view("inicio/cabecera",$dato);
-                    $this->load->view("inicio/$menu",$dato);
-                    $this->load->view("usuarios/new_user",$dato);
-                    $this->load->view("inicio/pie"); 
+            $dato['filas'] =$this->personal_model->selec_personal_modi($id);
+            $dato['title']= "Registro de usuarios del sistema";
+
+            $this->load->view("inicio/cabecera",$dato);
+            $this->load->view("inicio/$menu",$dato);
+            $this->load->view("usuarios/new_user",$dato);
+            $this->load->view("inicio/pie"); 
         } 
 
 

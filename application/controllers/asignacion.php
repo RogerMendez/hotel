@@ -479,7 +479,18 @@ class Asignacion extends CI_Controller {
 			$dias=intval($segundos/60/60/24);
 			$dias = $dias +1 ;
 
-			$actualizar = $this->asignar_model->edit_estadia($num,$hasta,$dias);
+
+			$filas = $this->asignar_model->select_habita_id($id_hab);
+
+			foreach($filas as $x)
+			{
+				$costo =  $x->costo;
+				$costo_total = $costo * $dias;		
+			}
+
+
+
+			$actualizar = $this->asignar_model->edit_estadia($num,$hasta,$dias, $costo_total);
 
 			$this->ver_clientes($id_hab);
 
